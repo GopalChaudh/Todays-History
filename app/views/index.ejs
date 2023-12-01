@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events of <%= Day %></title>
+   <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+<body>
+    <h1>Events of <span><%= Day %></span></h1>
+    <table>
+        <tr>
+            <th>Events</th>
+        </tr>
+        <% Events.forEach((event) => { %>
+            <tr>
+                <td><%= event.title %>: <%= event.detail %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <h2>Births and Deaths</h2>
+    <table>
+        <tr>
+            <th>Births</th>
+        </tr>
+        <% birthsAndDeaths.births.forEach((event) => { %>
+            <tr>
+                <td><%= event.title %>: <%= event.detail %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <table>
+        <tr>
+            <th>Deaths</th>
+        </tr>
+        <% birthsAndDeaths.deaths.forEach((event) => { %>
+            <tr>
+                <td><%= event.title %>: <%= event.detail %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
